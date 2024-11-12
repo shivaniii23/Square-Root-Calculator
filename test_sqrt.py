@@ -2,7 +2,7 @@ from sqrt import calculate_square_root
 import pytest
 
 def test_sqrt(): 
-    assert calculate_square_root(4) == 3
+    assert calculate_square_root(4) == 2 
     assert calculate_square_root(0) == 0
     assert calculate_square_root(1) == 1 
     assert calculate_square_root(9) == 3 
