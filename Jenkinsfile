@@ -60,6 +60,12 @@ pipeline {
 				sh 'docker run docker-prod 16'
 			}
 		}
+		
+		post {
+			always {
+				archiveArtifacts artifacts: 'pytest_report.txt', allowEmptyArchive: true
+			}
+		}
 	}
 }
 
