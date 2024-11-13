@@ -5,7 +5,7 @@ pipeline {
       steps {
         
         checkout scm
-      echo "Current branch: ${env.BRANCH_NAME}"   
+      echo "Current branch: ${env.GIT_BRANCH}"   
         }
     }
     stage('Build') {
