@@ -17,8 +17,10 @@ pipeline {
     }
     stage('Testing') {
 	when {
-         
-        expression { true }
+         expression {
+                    env.BRANCH_NAME.matches('*square-root') // Matches any branch that starts with 'feature/'
+                }
+
 }
       steps {
             sh 'sudo apt-get install -y python3-pytest'
