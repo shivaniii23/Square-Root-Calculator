@@ -30,17 +30,17 @@ pipeline {
 			when {
 				branch 'feature/squeare-root'
 			}
-			steps {
-				environment {
-            SONAR_URL = "http://54.144.204.191:9000"
-        }
-        steps{
-            withCredentials([string(credentialsId:'sonar', variable: 'SONAR_AUTH')])
-            sh 'sonar-scanner:sonar -Dsonar.login=$SONAR_AUTH - Dsonar.host.url=${SONAR_URL}'
-           
-        }
-
+			environment {
+				SONAR_URL = "http://54.226.28.130:9000"
 			}
+			steps{
+				withCredentials([string(credentialsId:'sonarqube', variable: 'SONAR_AUTH')])
+				sh 'sonar-scanner:sonar -Dsonar.login=$SONAR_AUTH - Dsonar.host.url=${SONAR_URL}'
+			   
+			}
+
+
+			
 		}
 		
 		stage('Docker test env') {
