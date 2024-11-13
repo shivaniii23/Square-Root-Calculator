@@ -9,7 +9,7 @@ pipeline {
     }
     stage('Build') {
 	when {
-		branch 'origin/feature/square-root'
+		branch 'feature/square-root'
 	}
       steps {
            sh 'python3 sqrt.py 20'
