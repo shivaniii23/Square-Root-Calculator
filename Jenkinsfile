@@ -5,13 +5,11 @@ pipeline {
       steps {
         
         checkout scm
-      echo "Current branch: ${env.GIT_BRANCH}"   
-echo "${branch}"
         }
     }
     stage('Build') {
 	when {
-		env.GIT_BRANCH 'origin/feature/square-root'
+		branch 'origin/feature/square-root'
 	}
       steps {
            sh 'python3 sqrt.py 20'
