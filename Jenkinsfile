@@ -28,7 +28,7 @@ pipeline {
 		
 		stage('SonarQube Analysis') {
 			when {
-				branch 'feature/squeare-root'
+				branch 'feature/square-root'
 			}
 			environment {
 				SONAR_URL = "http://54.226.28.130:9000"
