@@ -6,11 +6,8 @@ pipeline {
             script {
                 if (fileExists('Square-Root-Calculator')) {
                    sh 'rm -rf Square-Root-Calculator'
-                    sh 'git clone https://github.com/shivaniii23/Square-Root-Calculator.git'
                 }
-                else{
-                    sh 'git clone https://github.com/shivaniii23/Square-Root-Calculator.git'
-                }
+                checkout scm
             }
         }
     }
