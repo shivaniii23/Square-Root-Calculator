@@ -1,0 +1,36 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+rootdir: /home/ubuntu/Square-Root-Calculator
+collected 1 item
+
+test_sqrt.py Test case passed: calculate_square_root(4)
+Test case passed: calculate_square_root(0)
+Test case passed: calculate_square_root(1)
+Test case passed: calculate_square_root(9)
+Test case passed: calculate_square_root(16)
+Test case passed: calculate_square_root(25)
+Test case passed: calculate_square_root(2)
+Test case passed: calculate_square_root(10)
+Test case passed: calculate_square_root(-1) raised ValueError as expected
+Test case passed: calculate_square_root('I') raised TypeError as expected
+.
+
+============================== 1 passed in 0.01s ===============================
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+rootdir: /home/ubuntu/Square-Root-Calculator
+collected 1 item
+
+test_sqrt.py Test case passed: calculate_square_root(4)
+Test case passed: calculate_square_root(0)
+Test case passed: calculate_square_root(1)
+Test case passed: calculate_square_root(9)
+Test case passed: calculate_square_root(16)
+Test case passed: calculate_square_root(25)
+Test case passed: calculate_square_root(2)
+Test case passed: calculate_square_root(10)
+Test case passed: calculate_square_root(-1) raised ValueError as expected
+Test case passed: calculate_square_root('I') raised TypeError as expected
+.
+
+============================== 1 passed in 0.01s ===============================
