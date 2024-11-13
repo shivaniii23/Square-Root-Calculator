@@ -9,26 +9,27 @@ pipeline {
         }
     }
     stage('Build') {
+	when {
+		branch 'feature/square-root'
+	}
       steps {
-        dir('Square-Root-Calculator'){
-      	sh "ls -la" 
-            sh 'python3 sqrt.py 20'
-        }
-      }
+           sh 'python3 sqrt.py 20'
+       }
     }
     stage('Testing') {
-      steps {
-        dir('Square-Root-Calculator'){
-            sh 'sudo apt-get install -y python3-pytest'
-            sh 'ls -la'
-            sh 'pytest'
-            
+	when {
+                branch 'feature/testing'
         }
+      steps {
+            sh 'sudo apt-get install -y python3-pytest'
+            sh 'pytest'
       }
     }
     stage('SonarQube Analysis') {
+	when {
+                branch 'feature/testing'
+        }
         steps {
-            dir('Square-Root-Calculator'){
                 script{
                 def scannerHome = tool 'sonar';
                 
@@ -36,8 +37,7 @@ pipeline {
                   sh "${scannerHome}/bin/sonar-scanner"
                 }
                 }
-            }
-        }
+           }
   }
     
   }
