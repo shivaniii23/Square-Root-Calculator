@@ -5,7 +5,7 @@ pipeline {
       steps {
         
         checkout scm
-           
+       sh "ls -la"   
         }
     }
     stage('Build') {
