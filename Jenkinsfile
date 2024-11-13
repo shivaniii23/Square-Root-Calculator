@@ -28,19 +28,17 @@ pipeline {
 		
 		stage('SonarQube Analysis') {
 			when {
-				branch 'feature/square-root'
+				branch 'feature/testing'
 			}
-			environment {
-				SONAR_URL = "http://54.226.28.130:9000"
-			}
-			steps{
-				withCredentials([string(credentialsId:'sonar', variable: 'SONAR_AUTH')]){
-				sh 'sonar-scanner:sonar -Dsonar.login=$SONAR_AUTH - Dsonar.host.url=${SONAR_URL}'
-			   }
-			}
+			steps {
+				script{
+					def scannerHome = tool 'sonar';
 
-
-			
+					withSonarQubeEnv() {
+						sh "${scannerHome}/bin/sonar-scanner"
+					}
+				}
+			}
 		}
 		
 		stage('Docker test env') {
