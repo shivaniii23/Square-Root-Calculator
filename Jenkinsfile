@@ -7,8 +7,9 @@ pipeline {
                 if (fileExists('Square-Root-Calculator')) {
                    sh 'rm -rf Square-Root-Calculator'
                 }
-                checkout scm
-            }
+	}
+        checkout scm
+           
         }
     }
     stage('Build') {
