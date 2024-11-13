@@ -17,8 +17,9 @@ pipeline {
     }
     stage('Testing') {
 	when {
-                branch 'feature/testing'
-        }
+         
+        expression { true }
+}
       steps {
             sh 'sudo apt-get install -y python3-pytest'
             sh 'pytest'
