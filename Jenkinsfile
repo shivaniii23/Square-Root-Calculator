@@ -18,7 +18,7 @@ pipeline {
     stage('Testing') {
 	when {
          expression {
-                    env.BRANCH_NAME.matches('*square-root') // Matches any branch that starts with 'feature/'
+                    env.GIT_BRANCH.matches('*square-root') // Matches any branch that starts with 'feature/'
                 }
 
 }
