@@ -10,7 +10,7 @@ def calculate_square_root(num):
 
 def main():
     try:
-        a = int(sys.stdin.read().strip())
+        a = int(sys.argv[1])
         print(f"Square root of {a} is { calculate_square_root(a)}")
     except ValueError as e:
         print("Please enter valid integer")
