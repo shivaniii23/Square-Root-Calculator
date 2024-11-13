@@ -15,7 +15,7 @@ pipeline {
     stage('Build') {
       steps {
         dir('Square-Root-Calculator'){
-            sh 'git checkout feature/square-root'
+      	sh "la -la" 
             sh 'python3 sqrt.py 20'
         }
       }
