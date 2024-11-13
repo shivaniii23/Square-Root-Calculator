@@ -3,11 +3,7 @@ pipeline {
   stages {
     stage('Clone') {
       steps {
-            script {
-                if (fileExists('Square-Root-Calculator')) {
-                   sh 'rm -rf Square-Root-Calculator'
-                }
-	}
+        
         checkout scm
            
         }
