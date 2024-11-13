@@ -5,7 +5,7 @@ pipeline {
       steps {
         
         checkout scm
-       sh "ls -la"   
+      echo "Current branch: ${env.BRANCH_NAME}"   
         }
     }
     stage('Build') {
